@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head> 
+<body>
+    <div class="container">  
+        <div class="left-panel">
+            <div class="add-item">
+                <input type="text" placeholder="Назва товару">
+                <button class="add-button" data-tooltip="Додайте товар до кошика">Додати</button>
+            </div>
+            <div class="item-list">
+                <div class="flex-container">
+                    <div class="flex-container_div">
+                        <span class="item-name bought">Помідори</span>
+                        <div class="twoBtn-count">
+                            <button class="quantity-button decrement" data-tooltip="Зменшити кількість" style="visibility: hidden;">-</button>
+                            <span class="numberBox colorGray"><span>2</span></span>
+                            
+                            <button class="quantity-button increment" data-tooltip="Збільшити кількість" style="visibility: hidden;">+</button>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: center;">
+                        <button class="status-button" data-tooltip="Купити товар">Куплено</button>
+                        <button class="remove-button" data-tooltip="Видалити товар" style="display: none;">x</button>
+                    </div>
+                </div>
+                <div class="flex-container">
+                    <div class="flex-container_div">
+                        <label class="cookies-text">Печиво</label>
+                        <div class="twoBtn-count">
+                            <button class="quantity-button decrement" data-tooltip="Зменшити кількість">-</button>
+                            <span class="numberBox colorGray"><span>2</span></span>
+                            
+                            <button class="quantity-button increment" data-tooltip="Збільшити кількість">+</button>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: center;">
+                        <button class="status-button" data-tooltip="Купити товар">Куплено</button>
+                        <button class="remove-button" data-tooltip="Видалити товар">x</button>
+                    </div>
+                </div>
+                <div class="flex-container">
+                    <div class="flex-container_div">
+                        <input type="text" value="Сир" class="item-input">
+                        <div class="twoBtn-count">
+                            <button class="quantity-button decrement" data-tooltip="Зменшити кількість">-</button>
+                            <span class="numberBox colorGray"><span>2</span></span>
+                            
+                            <button class="quantity-button increment" data-tooltip="Збільшити кількість">+</button>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: center;">
+                        <button class="status-button" data-tooltip="Купити товар">Куплено</button>
+                        <button class="remove-button" data-tooltip="Видалити товар">x</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-panel">
+            <div class="summary">
+                <h2>Залишилося</h2>
+                <div class="summary-items-row">
+                    <div class="summary-item">
+                        <span>Печиво</span>
+                        <span class="badge">2</span>
+                    </div> 
+                    <div class="summary-item">
+                        <span>Сир</span>
+                        <span class="badge">1</span>
+                    </div>
+                </div>
+            </div>
+            <div class="summary">
+                <h2>Куплено</h2>
+                <div class="summary-item">
+                    <span class="item-name bought">Помідори</span>
+                    <span class="badge">2</span>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="badge">
+            <div class="badge-content">
+                <span>Buy List</span>
+                <span class="created-by ">Created by: Humeniuk Diana</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
