@@ -1,0 +1,277 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    background-color: #ffffffc6;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.left-panel{
+    width: 60%;
+    border: 2px solid #ccc; 
+    padding: 15px;
+    margin-right: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.right-panel{
+    width: 40%;
+    border: 2px solid #ccc; 
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.input-panel{
+    display: flex; 
+    width: 100%; 
+}
+
+.input-panel input{
+    flex: 1 0 auto; 
+    margin-right: 0px; 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px 0 0 5px; 
+    box-sizing: border-box;
+}
+
+.input-panel button{
+    flex: 0 1 100px; 
+    padding: 10px 20px;
+    border: none; 
+    background-color: #007bff; 
+    color: white;
+    font-size: 16px; 
+    border-radius: 0 5px 5px 0; 
+    cursor: pointer; 
+}
+
+.item{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
+    border-bottom: 1px solid #eee; 
+    padding: 10px 0;
+}
+
+.item-name {
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 5px;
+    margin-right: 20px;
+    width: 20%;
+}
+
+input.item-name{
+    border:0px;
+}
+
+.quantity{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.increment-btn{
+    color: white;
+    background-color: green;
+    border: 0px;
+    border-radius: 50%;  
+    width: 40px;        
+    height: 40px;       
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.decrement-btn{
+    color: white;
+    background-color: red;
+    border: 0px;
+    border-radius: 50%;  
+    width: 40px;        
+    height: 40px;       
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.numberBox{
+    font-family: "OpenSans-Semibold", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    display: inline-block;
+    background-color: #e5e5e5;
+    color: #646464;
+    text-align: center;
+    line-height: 0px;
+    border-radius: 10%;
+    font-size: 16px;
+    width: 40px;
+    height: 40px;
+    font-weight: bold;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.numberBox span {
+    display: inline-block;
+    padding-top: 50%;
+    padding-bottom: 50%;
+    margin-left: 1px;  
+    margin-right: 1px;
+}
+
+.status-panel{
+    display: flex; 
+    align-items: center;
+    height: 33px;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    min-width: 0;
+}
+
+.status-button{
+    padding: 5px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    margin-left: 10px;
+    cursor: pointer;
+    min-width: 90px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.remove-button{
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    min-width: 30px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.bought .decrement-btn{
+    visibility: hidden;
+}
+
+.bought .increment-btn{
+    visibility: hidden;
+}
+
+.bought .item-name {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.bought .remove-button{
+    display: none;
+}
+
+.bought .numberBox{
+    margin-left: -30px;
+}
+
+
+.summary-item {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    margin-right: 10px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    min-width: 0
+}
+
+.summary-item:last-child {
+    margin-right: 0;
+}
+
+.summary-item .badge {
+    background-color: orange;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 50%;
+    margin-left: 15px;
+    position: static;
+    top: 0;
+    left: 0;
+    transform: none;
+    border: none;
+}
+.summary-items-row {
+    display: flex;
+    flex-direction: row; 
+    justify-content: flex-start; 
+    align-items: center; 
+    flex-wrap: wrap;
+    width: 100%;
+    border-bottom: 1px solid #eee; 
+    padding-bottom: 10px;
+    border-top: 1px solid #eee; 
+    padding-top: 10px;
+}
+
+@media (max-width: 500px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-panel, .right-panel {
+        margin: 0;
+        width: 100%
+    }
+
+    .input-panel, .item-list, .summary {
+        width: 100%;
+    }
+
+    .item-name, .remove-button, .status-button, .quantity {
+        width: auto;
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+
+    .bought .numberBox{
+        margin-left: 40px;
+    }
+}
+
+[data-tooltip]:before {
+    content: attr(data-tooltip);
+    position: absolute;
+    background-color: rgb(116, 248, 90);
+    color: white;
+    border-radius: 5px;
+    padding: 4px 8px;
+    font-size: 12px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    transform: translateY(10px);
+    z-index: 10;
+}
+
+[data-tooltip]:hover:before {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(-5px);
+}
