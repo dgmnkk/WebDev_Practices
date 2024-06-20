@@ -81,8 +81,16 @@ function toggleItemStatus(item) {
 }
 
 function updateItemName(input, item) {
-    item.name = input.value;
-    renderItems();
+    if (initialItems.some(i => i.name.toLowerCase() === input.value.toLowerCase())) {
+        input.value = item.name;
+    }
+
+    if(input.value !== ''){
+        item.name = input.value;
+        renderItems();
+    }else{
+        input.value = item.name;
+    }
 }
 
 function updateItemQuantity(item, delta) {

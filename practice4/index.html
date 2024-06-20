@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Pizza-App</title>
+</head>
+
+<body>
+    <div class="page">
+        <div class="main-page">
+            <div class="header">
+                <div class="flag">
+                    <p>PIZZA <br /> KMA</p>
+                    <img src="images/discount.svg" />
+                </div>
+                <div class="header-container">
+                    <div class="header-top">
+                        <div class="info">
+                            <p>(044) 222 5 222</p>
+                            <p>24 години/7 днів на тиждень</p>
+                            <p>Безкоштовна доставка піци</p>
+                        </div>
+                        <div>
+                            <button>Ввійти</button>
+                        </div>
+                    </div>
+                    <div class="header-bottom">
+                        <p>Піца</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu">
+                <div class="title">
+                    <span>Усі піци</span>
+                    <span class="badge">0</span>
+                </div>
+                <div class="categories-panel">
+                    <button name="all">Усі</button>
+                    <button name="meat">М'ясні</button>
+                    <button name="pineapple">З ананасами</button>
+                    <button name="mushroom">З грибами</button>
+                    <button name="ocean">З морепродуктами</button>
+                    <button name="vega">Вега</button>
+                </div>
+                <div class="menu-panel">
+
+                </div>
+                <div class="footer">
+                    <div class="flag-bottom">
+                        <img src="images/discount.svg" />
+                        <div class="text">
+                            <p>Цього тижня на все</p>
+                            <p>-20%</p>
+                        </div>
+                    </div>
+                    <p class="footer-info">Pizza.22 - практичний проект в межах курсу JavaScript в Києво-Могилянській
+                        Академії <br />Доставка піци не здійснюється</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="order-page">
+            <div class="header">
+                <div class="order-title">
+                    <span>Замовлення</span>
+                    <span class="badge">0</span>
+                </div>
+                <button class="clean-btn">Очистити замовлення</button>
+            </div>
+            <div class="card-panel">
+
+            </div>
+            <div class="summary">
+                <div class="summary-price">
+                    <p>Сума замовлення</p>
+                    <p></p>
+                </div>
+                <button onclick="placeOrder()">Замовити</button>
+            </div>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>
