@@ -1,0 +1,507 @@
+html,
+body {
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+.page {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.main-page {
+    width: 80%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 10% 90%;
+    overflow-y: auto;
+    margin: auto;
+    min-width: 500px;
+    overflow-x: hidden;
+}
+
+
+.main-page .header {
+    font-size: 15px;
+    background-color: #333331;
+    margin: 0px;
+    color: white;
+    padding: 5px 10px;
+    position: sticky;
+    top: 0;
+    opacity: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+.header-container{
+    width: 90%;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+    color: gray;
+    align-items: center;
+    height: 50%;
+}
+
+.header-top button {
+    height: 40px;
+    width: 70px;
+    border-radius: 4px;
+    background-color: #ec861c;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.flag {
+    background-color: #ec861c;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    margin: 5px 5px -40px 20px;
+    width: 80px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.flag p {
+    font-size: larger;
+    margin: 10px 0 0;
+    position: absolute; 
+    top: 5px;
+    left: 0;
+    right: 0;
+}
+
+.flag img {
+    transform: scaleY(-1); 
+    width: 100%;
+    position: absolute; 
+    bottom: -8px; 
+}
+
+.flag-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 20px;
+    color: white;
+    font-weight: bold;
+    width: 100px;
+    height: 130px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.flag-bottom img {
+    margin: 0;
+    padding: 0;
+}
+
+.flag-bottom .text {
+    margin: 0;
+    padding: 0;
+    background-color: #ec861c;
+    height: 120px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flag-bottom p {
+    font-size: larger;
+    margin: 0;
+    padding: 0;
+}
+
+
+.info {
+    display: flex;
+    align-items: center;
+}
+
+.info p {
+    margin-right: 15px;
+}
+
+.info p:first-child {
+    font-size: larger;
+}
+
+.title {
+    text-align: center;
+}
+
+.title span:first-child {
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.badge {
+    background-color: orange;
+    color: white;
+    padding: 2px 7px;
+    border-radius: 50%;
+    margin-left: 7px;
+    position: static;
+    top: 0;
+    left: 0;
+    transform: none;
+    border: none;
+}
+
+.menu {
+    margin: 10px;
+    align-items: center;
+}
+
+.categories-panel {
+    margin: 20px;
+    text-align: center;
+}
+
+.categories-panel button {
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-size: 14px;
+    margin: 5px;
+    border: 0px;
+    background-color: white;
+    color: #ec861c;
+}
+
+.categories-panel button:focus {
+    background-color: #ec861c;
+    color: white;
+}
+
+.menu-panel {
+    display: grid;
+    gap: 10px;
+    margin: 5px 100px;
+}
+
+@media (min-width: 1100px) {
+    .menu-panel {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .info p:nth-child(3){
+        display: none;
+    }
+
+}
+
+@media (min-width: 1400px) {
+    .menu-panel {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .info p:nth-child(2){
+        display:flex;
+    }
+    .info p:nth-child(3){
+        display: flex;
+    }
+}
+
+@media (max-width: 1100px) {
+    .menu-panel {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .info p:nth-child(2){
+        display: none;
+    }
+    .info p:nth-child(3){
+        display: none;
+    }
+}
+
+.menu-item {
+    width: 300px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+}
+
+.description {
+    margin: 5px 15px;
+}
+
+.item-img {
+    height: 300px;
+    width: 300px;
+}
+
+.menu-item h3 {
+    font-size: 30px;
+    color: #ec861c;
+    margin-bottom: -5px;
+}
+
+.options {
+    display: flex;
+    margin: 5px 15px;
+    justify-content: space-around;
+}
+
+.type {
+    color: rgb(176, 172, 172);
+    margin-bottom: -10px;
+}
+
+.option {
+    text-align: center;
+}
+
+
+.option button {
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-size: 14px;
+    margin: 10px;
+    border: 0px;
+    background-color: #ec861c;
+    color: white;
+}
+
+.price {
+    font-size: 25px;
+    font-weight: 800;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.currency {
+    margin: 0px;
+}
+
+.footer {
+   padding-top: 10px;
+    margin-bottom: 0px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    height: 120px;
+    border-top: #c6c6c0 1px solid;
+}
+
+.footer-info{
+    margin-top: 40px;
+    color: #a8a8a5;
+}
+
+.order-page {
+    width: 20%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 10% 80% 10%;
+    min-width: 300px;
+}
+
+.order-page .header {
+    font-size: larger;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.order-title {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 10px;
+}
+
+
+.clean-btn {
+    height: 20px;
+    background-color: white;
+    border: 0px;
+    color: #7f7f7c;
+}
+
+.clean-btn:hover {
+    border: #7f7f7c 1px solid;
+    border-radius: 2px;
+}
+
+.card-panel {
+    background-color: #f6f5f7f1;
+    border: 0px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.card-item {
+    border: #efefef 1px solid;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+}
+
+.price-info {
+    display: flex;
+    align-items: center;
+}
+
+.price-info p {
+    font-weight: 700;
+}
+
+.summary-img {
+    margin-right: -60px;
+    height: 120px;
+    width: 120px;
+}
+
+.quantity {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.increment-btn {
+    color: white;
+    background-color: green;
+    border: 0px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.decrement-btn {
+    color: white;
+    background-color: red;
+    border: 0px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.numberBox {
+    font-family: "OpenSans-Semibold", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    display: inline-block;
+    background-color: #e5e5e5;
+    color: #646464;
+    text-align: center;
+    line-height: 0px;
+    border-radius: 10%;
+    font-size: 16px;
+    width: 30px;
+    height: 30px;
+    font-weight: bold;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.numberBox span {
+    display: inline-block;
+    padding-top: 50%;
+    padding-bottom: 50%;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+.delete-btn {
+    color: #ec861c;
+    background-color: white;
+    border: 0px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.price-info p{
+    width: 70px;
+}
+.item-name {
+    font-size: larger;
+    color: #ec861c;
+    margin-bottom: 5px;
+}
+
+.weight {
+    margin-left: 10px;
+}
+
+.summary-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.summary-price p:last-child {
+    font-size: larger;
+}
+
+.summary {
+    text-align: center;
+}
+
+.summary button {
+    width: 80%;
+    height: 30px;
+    background-color: #ec861c;
+    color: white;
+    border: 0px;
+    border-radius: 4px;
+    margin-top: -5px;
+}
+
+.new-badge{
+    position: relative;
+    top: -5px;
+    left: 150px;
+    background-color: red;
+    border-radius: 4px;
+    color: white;
+    padding: 5px 10px;
+}
+
+.popular-badge{
+    position: relative;
+    top: -5px;
+    left: 170px;
+    background-color: green;
+    border-radius: 4px;
+    color: white;
+    padding: 5px 10px;
+}
+
+.non{
+    visibility: hidden;
+}
+
+.item-components{
+    height: 75px;
+}
